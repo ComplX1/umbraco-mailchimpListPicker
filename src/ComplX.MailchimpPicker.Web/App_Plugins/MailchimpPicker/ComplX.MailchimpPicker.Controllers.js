@@ -152,7 +152,7 @@ function mailchimpListPickerController($scope, entityResource, editorState, icon
     //dialog
     $scope.openContentPicker = function () {
         $scope.contentPickerOverlay = dialogOptions;
-        $scope.contentPickerOverlay.view = '../App_Plugins/MailChimpListPicker/views/dialogs/MailchimpPicker.html';
+        $scope.contentPickerOverlay.view = '../App_Plugins/MailchimpPicker/views/dialogs/MailchimpPicker.html';
         $scope.contentPickerOverlay.show = true;
         $scope.contentPickerOverlay.dataTypeId = $scope.model && $scope.model.dataTypeId ? $scope.model.dataTypeId : null;
         $scope.contentPickerOverlay.submit = function (model) {
@@ -340,4 +340,4 @@ function mailchimpOverlayController($scope, eventsService, mailchimpPickerResour
 
     $scope.eventhandler.bind('treeNodeSelect', nodeSelectHandler);
 }
-angular.module('umbraco').controller('ComplX.Overlays.mailchimpOverlayController', ['$scope', 'eventsService', 'ComplX.propertyEditors.Resource', mailchimpOverlayController]);
+angular.module('umbraco').controller('ComplX.Overlays.mailchimpOverlayController', ['$scope', 'eventsService', 'ComplX.MailchimpPicker.Resource', mailchimpOverlayController]);

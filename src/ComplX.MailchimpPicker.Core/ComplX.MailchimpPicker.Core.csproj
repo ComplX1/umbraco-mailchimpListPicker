@@ -81,6 +81,7 @@
     </Reference>
     <Reference Include="MailChimp.Net, Version=4.2.1.0, Culture=neutral, PublicKeyToken=37d26d538413c581, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MailChimp.Net.V3.4.2.1\lib\net45\MailChimp.Net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MarkdownSharp, Version=1.14.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Markdown.1.14.7\lib\net45\MarkdownSharp.dll</HintPath>
