@@ -1,0 +1,9 @@
+﻿<div ng-controller="ComplX.Overlays.mailchimpOverlayController">
+    <ul class="umb-tree">
+        <li class="root">
+            <ul>
+                <umb-tree-item ng-repeat="child in mailingLists" enablelistviewexpand="{{enablelistviewexpand}}" eventhandler="eventhandler" node="child" current-node="currentNode" tree="this" section="{{section}}" ng-animate="animation()"></umb-tree-item>
+            </ul>
+        </li>
+    </ul>
+</div>

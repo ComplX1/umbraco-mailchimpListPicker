@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Tests", "3. Tests", "{25BAE16A-15C2-41CB-9198-5A4F82751B41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Core", "1. Core", "{51CC5A19-664C-4932-A65D-9DAEB1F805BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Web", "2. Web", "{778645E0-F30F-4118-B713-63DFE31FD273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplX.MailchimpPicker.Core", "src\ComplX.MailchimpPicker.Core\ComplX.MailchimpPicker.Core.csproj", "{AD8C22CE-B8D4-40EF-88CD-0C229424382B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplX.MailchimpPicker.Web", "src\ComplX.MailchimpPicker.Web\ComplX.MailchimpPicker.Web.csproj", "{7327D34F-6923-4543-914F-624C9BDE0644}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD8C22CE-B8D4-40EF-88CD-0C229424382B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD8C22CE-B8D4-40EF-88CD-0C229424382B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD8C22CE-B8D4-40EF-88CD-0C229424382B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD8C22CE-B8D4-40EF-88CD-0C229424382B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7327D34F-6923-4543-914F-624C9BDE0644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7327D34F-6923-4543-914F-624C9BDE0644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7327D34F-6923-4543-914F-624C9BDE0644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7327D34F-6923-4543-914F-624C9BDE0644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD8C22CE-B8D4-40EF-88CD-0C229424382B} = {51CC5A19-664C-4932-A65D-9DAEB1F805BB}
+		{7327D34F-6923-4543-914F-624C9BDE0644} = {778645E0-F30F-4118-B713-63DFE31FD273}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {590F9174-81DA-4727-99C7-17CD2A73DCB7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "ComplX.MailchimpPicker",
+      "name": "[ComplX] Mailchimp List Picker",
+      "icon": "icon-code",
+      "group": "Pickers",
+      "editor": {
+        "view": "~/App_Plugins/MailChimpPicker/Editor.html"
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/MailChimpPicker/ComplX.MailchimpPicker.Resource.js",
+    "~/App_Plugins/MailChimpPicker/ComplX.MailchimpPicker.Controllers.js"
+  ],
+  "css": [		
+	"~/App_Plugins/MailChimpPicker/icon.css"
+]
+}
