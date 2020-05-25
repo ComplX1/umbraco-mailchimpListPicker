@@ -36,12 +36,26 @@ namespace ComplX.MailchimpPicker.Core
             var Lists = MailchimpLists.OrderByDescending(l => l.DateCreated).Select(l => new MailchimpList()
             {
                 ID = l.Id
-              ,
-                Name = l.Name
+              , Name = l.Name
             });
 
             return Json(Lists, new Newtonsoft.Json.JsonSerializerSettings() { ContractResolver = new CamelCasePropertyNamesContractResolver() });
         }
 
+        /// <summary>
+        /// Gets incoming links for a document
+        /// </summary>
+        public JsonResult<MailchimpList> GetMailchimpList(string id)
+        {
+            var MailchimpList = mailChimpManager.Lists.GetAsync(id).Result;
+
+            var List = new MailchimpList()
+            {
+                ID = MailchimpList.Id
+              , Name = MailchimpList.Name
+            };
+
+            return Json(List, new Newtonsoft.Json.JsonSerializerSettings() { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+        }
     }
 }

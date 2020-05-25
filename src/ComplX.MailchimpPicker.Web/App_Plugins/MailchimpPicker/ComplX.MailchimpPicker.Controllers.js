@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-function mailchimpListPickerController($scope, entityResource, editorState, iconHelper, $routeParams, angularHelper, navigationService, $location, miniEditorHelper, localizationService) {
+function mailchimpListPickerController($scope, entityResource, editorState, iconHelper, $routeParams, angularHelper, navigationService, $location, miniEditorHelper, localizationService, mailchimpPickerResource) {
     var unsubscribe;
     function subscribe() {
         unsubscribe = $scope.$on('formSubmitting', function (ev, args) {
@@ -220,22 +220,14 @@ function mailchimpListPickerController($scope, entityResource, editorState, icon
             unsubscribe();
         }
     });
-    var modelIds = $scope.model.value ? $scope.model.value.split(',') : [];
     //load current data if anything selected
-    if (modelIds.length > 0) {
-        entityResource.getByIds(modelIds, entityType).then(function (data) {
-            _.each(modelIds, function (id, i) {
-                var entity = _.find(data, function (d) {
-                    return $scope.model.config.idType === 'udi' ? d.udi == id : d.id == id;
-                });
-                if (entity) {
-                    setEntityUrl(entity);
-                }
-            });
-            //everything is loaded, start the watch on the model
+    if ($scope.model.value !== "") {
+        mailchimpPickerResource.getList($scope.model.value).then(function (result) {
+            setEntityUrl(result.data);
+
             startWatch();
             subscribe();
-        });
+        });        
     } else {
         //everything is loaded, start the watch on the model
         startWatch();
@@ -301,7 +293,7 @@ function mailchimpListPickerController($scope, entityResource, editorState, icon
         }
     }
 }
-angular.module('umbraco').controller('ComplX.propertyEditors.mailchimpPickerController', mailchimpListPickerController);
+angular.module('umbraco').controller('ComplX.propertyEditors.mailchimpPickerController', ['$scope', 'entityResource', 'editorState', 'iconHelper', '$routeParams', 'angularHelper', 'navigationService', '$location', 'miniEditorHelper', 'localizationService', 'ComplX.MailchimpPicker.Resource', mailchimpListPickerController]);
 
 function mailchimpOverlayController($scope, eventsService, mailchimpPickerResource) {
     $scope.eventhandler = $({});
