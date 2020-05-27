@@ -218,7 +218,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\AppSettings.cs" />
     <Compile Include="Models\MailchimpList.cs" />
+    <Compile Include="PackageActions\WebConfigSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebApi\MailchimpPickerApiController.cs" />
   </ItemGroup>

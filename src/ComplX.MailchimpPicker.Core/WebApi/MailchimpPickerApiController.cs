@@ -18,7 +18,7 @@ namespace ComplX.MailchimpPicker.Core
 
         public MailchimpPickerApiController()
         {
-            mailChimpManager = new MailChimpManager(ConfigurationManager.AppSettings["MailChimpApiKey"]);
+            mailChimpManager = new MailChimpManager(ConfigurationManager.AppSettings[Constants.AppSettings.MailchimpApiKey]);
         }
 
         public MailchimpPickerApiController(IMailChimpManager mailChimpManager)
