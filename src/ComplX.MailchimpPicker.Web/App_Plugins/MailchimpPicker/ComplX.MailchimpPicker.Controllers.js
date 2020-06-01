@@ -193,7 +193,11 @@ function mailchimpOverlayController($scope, eventsService, mailchimpPickerResour
 
     mailchimpPickerResource.getLists().then(function (result) {
         $scope.mailingLists = result.data;
-    });
+    }, function(result) {
+		if (result.status === 403) { 
+			$scope.apiError = true;
+		}
+	});
 
     //wires up selection
     function nodeSelectHandler(ev, args) {
