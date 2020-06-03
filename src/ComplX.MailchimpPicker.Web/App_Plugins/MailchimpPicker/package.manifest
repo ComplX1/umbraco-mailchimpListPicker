@@ -3,7 +3,7 @@
     {
       "alias": "ComplX.MailchimpPicker",
       "name": "[ComplX] Mailchimp List Picker",
-      "icon": "icon-code",
+      "icon": "mailchimplistpicker-picker",
       "group": "Pickers",
       "editor": {
         "view": "~/App_Plugins/MailchimpPicker/Editor.html"
@@ -15,6 +15,6 @@
     "~/App_Plugins/MailchimpPicker/ComplX.MailchimpPicker.Controllers.js"
   ],
   "css": [		
-	"~/App_Plugins/MailchimpPicker/icon.css"
-]
+	  "~/App_Plugins/MailchimpPicker/icon.css"
+  ]
 }
